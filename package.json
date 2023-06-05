@@ -20,5 +20,9 @@
   "dependencies": {
     "gulp-install": "^1.1.0"
   },
-  "devDependencies": {}
+  "devDependencies": {
+    "gulp": "^4.0.2",
+    "gulp-sass": "^5.1.0",
+    "sass": "^1.62.1"
+  }
 }
