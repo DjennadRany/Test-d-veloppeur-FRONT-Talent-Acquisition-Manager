@@ -1,23 +1,24 @@
 const carouselItems = document.querySelectorAll('.carousel-item');
-const removeActiveButton = document.getElementById('removeActiveButton');
+const removeActiveButtons = document.querySelectorAll('.removeActiveButton');
 
 // Ajouter la classe "active" au premier élément
 carouselItems[0].classList.add('active');
 
 carouselItems.forEach((item) => {
-  item.addEventListener('click', () => {
-    if (item.classList.contains('active')) {
-      item.classList.remove('active');
-    } else {
+  item.addEventListener('mouseenter', () => {
+    if (!item.classList.contains('active')) {
       closeAllItems();
       item.classList.add('active');
     }
   });
+
+  item.addEventListener('mouseleave', () => {
+    item.classList.remove('active');
+  });
 });
 
-removeActiveButton.addEventListener('click', (event) => {
-  event.stopPropagation();
-  closeAllItems();
+removeActiveButtons.forEach((button) => {
+  button.addEventListener('click', closeAllItems);
 });
 
 function closeAllItems() {
@@ -25,5 +26,3 @@ function closeAllItems() {
     item.classList.remove('active');
   });
 }
-
-
