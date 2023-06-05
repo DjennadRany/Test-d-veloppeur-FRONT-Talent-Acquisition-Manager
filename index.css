@@ -168,7 +168,7 @@ img.info-widj {
     border-radius: 10px;
     object-fit: cover;
     background: black;
-    padding: 6em;
+    padding: 33%;
     margin: auto;
     position: relative;
     display: block;
@@ -239,7 +239,7 @@ hr.ligne {
         align-content: flex-end;
     }
     .widget-block {
-        width: 80%;
+        width: 90%;
     }
     .carousel-container {
         width: 100%;
@@ -251,5 +251,19 @@ hr.ligne {
         flex-direction: column;
         flex-wrap: nowrap;
         align-items: center;
+    }
+    img.info-widj {
+        width: auto;
+        height: auto;
+        border-radius: 10px;
+        object-fit: cover;
+        background: black;
+        padding: 28%;
+        margin: auto;
+        position: relative;
+        display: block;
+    }
+    .widjet-item {
+        margin-top: 5em;
     }
     }
