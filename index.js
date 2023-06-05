@@ -12,9 +12,6 @@ carouselItems.forEach((item) => {
     }
   });
 
-  item.addEventListener('mouseleave', () => {
-    item.classList.remove('active');
-  });
 });
 
 removeActiveButtons.forEach((button) => {
