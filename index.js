@@ -1,4 +1,8 @@
 const carouselItems = document.querySelectorAll('.carousel-item');
+const removeActiveButton = document.getElementById('removeActiveButton');
+
+// Ajouter la classe "active" au premier élément
+carouselItems[0].classList.add('active');
 
 carouselItems.forEach((item) => {
   item.addEventListener('click', () => {
@@ -11,9 +15,15 @@ carouselItems.forEach((item) => {
   });
 });
 
+removeActiveButton.addEventListener('click', (event) => {
+  event.stopPropagation();
+  closeAllItems();
+});
+
 function closeAllItems() {
   carouselItems.forEach((item) => {
     item.classList.remove('active');
   });
 }
+
 
